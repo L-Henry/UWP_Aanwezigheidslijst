@@ -8,7 +8,7 @@ using UWP_Aanwezigheidslijst.EF;
 namespace UWP_Aanwezigheidslijst.EF.Migrations
 {
     [DbContext(typeof(AanwezigheidslijstDBContext))]
-    [Migration("20190812132111_InitialCreate")]
+    [Migration("20190812133244_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -24,7 +24,8 @@ namespace UWP_Aanwezigheidslijst.EF.Migrations
 
                     b.Property<string>("Bedrijf");
 
-                    b.Property<string>("Naam");
+                    b.Property<string>("Naam")
+                        .IsRequired();
 
                     b.HasKey("Id");
 

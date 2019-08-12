@@ -12,7 +12,7 @@ namespace UWP_Aanwezigheidslijst.EF.Migrations
                 {
                     Id = table.Column<int>(nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Naam = table.Column<string>(nullable: true),
+                    Naam = table.Column<string>(nullable: false),
                     Bedrijf = table.Column<string>(nullable: true)
                 },
                 constraints: table =>

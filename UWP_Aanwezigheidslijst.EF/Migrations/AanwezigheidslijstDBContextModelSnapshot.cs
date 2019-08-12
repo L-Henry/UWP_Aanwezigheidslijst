@@ -22,7 +22,8 @@ namespace UWP_Aanwezigheidslijst.EF.Migrations
 
                     b.Property<string>("Bedrijf");
 
-                    b.Property<string>("Naam");
+                    b.Property<string>("Naam")
+                        .IsRequired();
 
                     b.HasKey("Id");
 

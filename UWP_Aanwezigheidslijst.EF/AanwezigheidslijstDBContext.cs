@@ -17,8 +17,11 @@ namespace UWP_Aanwezigheidslijst.EF
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Docent>()
+                .Property(d => d.Naam).IsRequired();
+            modelBuilder.Entity<Docent>()
                 .ToTable("Docenten")
                 .HasKey(d => d.Id);
+
             base.OnModelCreating(modelBuilder);
         }
     }
