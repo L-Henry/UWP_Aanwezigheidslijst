@@ -10,7 +10,7 @@ namespace UWP_Aanwezigheidslijst.EF
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Date Scourse = aanwezigheidslijst.db");
+            optionsBuilder.UseSqlite("Data Source = aanwezigheidslijst.db");
             base.OnConfiguring(optionsBuilder);
         }
 
