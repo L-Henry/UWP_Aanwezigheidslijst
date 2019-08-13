@@ -37,6 +37,7 @@ namespace UWP_Aanwezigheidslijst.UWP.ViewModels
             DeleteCommand = new RelayCommand(() => DeleteDocent());
 
             _docenten = new ObservableCollection<ViewDocent>();
+
             GetDocenten();
         }
 
@@ -47,12 +48,15 @@ namespace UWP_Aanwezigheidslijst.UWP.ViewModels
 
         private void DeleteDocent()
         {
-            throw new NotImplementedException();
+            
+            Model.DeleteDocent(SelectedDocent);
+            GetDocenten();
         }
 
         private void UpdateDocent()
         {
-            throw new NotImplementedException();
+            Model.UpdateDocent(SelectedDocent);
+            GetDocenten();
         }
 
 

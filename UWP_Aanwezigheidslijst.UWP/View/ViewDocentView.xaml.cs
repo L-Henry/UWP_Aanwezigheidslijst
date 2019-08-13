@@ -30,5 +30,10 @@ namespace UWP_Aanwezigheidslijst.UWP.View
 
             this.InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(CreateDocentView));
+        }
     }
 }

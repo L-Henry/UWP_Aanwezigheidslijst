@@ -19,5 +19,15 @@ namespace UWP_Aanwezigheidslijst.UWP.Models
         {
             return _docentService.GetDocenten();
         }
+
+        public void UpdateDocent(ViewDocent docent)
+        {
+            _docentService.Update(docent);
+        }
+
+        public void DeleteDocent(ViewDocent docent)
+        {
+            _docentService.Delete(docent);
+        }
     }
 }

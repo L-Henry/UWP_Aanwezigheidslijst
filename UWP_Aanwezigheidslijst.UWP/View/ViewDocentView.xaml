@@ -31,15 +31,15 @@
         </Grid.RowDefinitions>
         <TextBlock Text="Docenten" VerticalAlignment="Center" Grid.ColumnSpan="4" FontSize="70" HorizontalAlignment="Center"/>
         <TextBlock Text="{x:Bind ViewModel.SelectedDocent.Id, Mode=OneWay}" Grid.Row="1" Grid.ColumnSpan="3" VerticalAlignment="Center"/>
-        <TextBox Text="{x:Bind ViewModel.SelectedDocent.Naam, Mode=OneWay}" PlaceholderText="Naam" Grid.Row="2" Grid.ColumnSpan="3" VerticalAlignment="Center"/>
-        <TextBox Text="{x:Bind ViewModel.SelectedDocent.Bedrijf, Mode=OneWay}" PlaceholderText="Bedrijf" Grid.Row="3" Grid.ColumnSpan="3" VerticalAlignment="Center"/>
+        <TextBox Text="{x:Bind ViewModel.SelectedDocent.Naam, Mode=TwoWay}" PlaceholderText="Naam" Grid.Row="2" Grid.ColumnSpan="3" VerticalAlignment="Center"/>
+        <TextBox Text="{x:Bind ViewModel.SelectedDocent.Bedrijf, Mode=TwoWay}" PlaceholderText="Bedrijf" Grid.Row="3" Grid.ColumnSpan="3" VerticalAlignment="Center"/>
 
-        <Button Grid.Row="4" HorizontalAlignment="Center">Create New</Button>
+        <Button Grid.Row="4" HorizontalAlignment="Center" Click="Button_Click">Create New</Button>
         <Button Command="{x:Bind ViewModel.UpdateCommand}" Grid.Row="4" Grid.Column="1" HorizontalAlignment="Center">Update</Button>
         <Button Command="{x:Bind ViewModel.DeleteCommand}" Grid.Row="4" Grid.Column="2" HorizontalAlignment="Center">Delete</Button>
 
 
-        <ListView Grid.Column="4" Grid.Row="1" Grid.RowSpan="4" x:Name="DocentListView" ItemsSource="{x:Bind ViewModel.Docenten, Mode=OneWay}" SelectedItem="{x:Bind ViewModel.SelectedDocent, Mode=TwoWay}">
+        <ListView Grid.Column="4" Grid.Row="1" Grid.RowSpan="4" x:Name="DocentListView" ItemsSource="{x:Bind ViewModel.Docenten, Mode=TwoWay}" SelectedItem="{x:Bind ViewModel.SelectedDocent, Mode=TwoWay}">
             <ListView.ItemTemplate>
                 <DataTemplate x:DataType="local2:ViewDocent">
                     <StackPanel>

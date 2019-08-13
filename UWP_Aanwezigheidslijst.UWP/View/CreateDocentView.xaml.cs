@@ -30,5 +30,15 @@ namespace UWP_Aanwezigheidslijst.UWP.View
 
             this.InitializeComponent();
         }
+
+        private void GoBack(object sender, RoutedEventArgs e)
+        {
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+            }
+
+
+        }
     }
 }
