@@ -21,12 +21,12 @@ namespace UWP_Aanwezigheidslijst.UWP.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class CreateDocentView : Page
+    public sealed partial class ViewDocentView : Page
     {
-        public readonly CreateDocentViewModel ViewModel;
-        public CreateDocentView()
+        public readonly ViewDocentViewModel ViewModel;
+        public ViewDocentView()
         {
-            ViewModel = new CreateDocentViewModel();
+            ViewModel = new ViewDocentViewModel();
 
             this.InitializeComponent();
         }

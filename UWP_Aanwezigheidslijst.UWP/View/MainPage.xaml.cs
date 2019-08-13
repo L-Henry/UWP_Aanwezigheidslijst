@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
-using UWP_Aanwezigheidslijst.UWP.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -21,14 +20,28 @@ namespace UWP_Aanwezigheidslijst.UWP.View
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class CreateDocentView : Page
+    public sealed partial class MainPage : Page
     {
-        public readonly CreateDocentViewModel ViewModel;
-        public CreateDocentView()
+        public MainPage()
         {
-            ViewModel = new CreateDocentViewModel();
-
             this.InitializeComponent();
+        }
+
+
+        private void NavView_SelectionChanged_1(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
+        {
+            var item = (NavigationViewItem)args.SelectedItem;
+
+            switch (item.Tag.ToString())
+            {
+                case "NavDoc":
+                    FrameOnMainPage.Navigate(typeof(ViewDocentView));
+                    break;
+                default:
+                    
+                    break;
+            }
+
         }
     }
 }
